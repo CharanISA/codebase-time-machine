@@ -89,6 +89,40 @@ function App() {
             </div>
           </div>
 
+          <div className="graph-grid">
+  <div className="card graph-card">
+    <h3>Contributor Commit Graph</h3>
+    <ResponsiveContainer width="100%" height={300}>
+      <BarChart data={authorChartData}>
+        <XAxis dataKey="name" />
+        <YAxis />
+        <Tooltip />
+        <Bar dataKey="commits" fill="#4f8cff" />
+      </BarChart>
+    </ResponsiveContainer>
+  </div>
+
+  <div className="card graph-card">
+    <h3>File Change Distribution</h3>
+    <ResponsiveContainer width="100%" height={300}>
+      <PieChart>
+        <Pie
+          data={fileChartData}
+          dataKey="changes"
+          nameKey="name"
+          outerRadius={100}
+          label
+        >
+          {fileChartData.map((entry, index) => (
+            <Cell key={index} fill={["#4f8cff", "#7db4ff", "#22c55e", "#facc15", "#fb7185"][index % 5]} />
+          ))}
+        </Pie>
+        <Tooltip />
+      </PieChart>
+    </ResponsiveContainer>
+  </div>
+</div>
+
           <div className="insight-card">
             <h3>Project Insight</h3>
             <p>{data.insights.summary}</p>
