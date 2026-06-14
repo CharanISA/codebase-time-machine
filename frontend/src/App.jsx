@@ -30,6 +30,20 @@ function App() {
     setLoading(false);
   }
 
+  const authorChartData = data
+    ? data.top_authors.map((author) => ({
+        name: author[0],
+        commits: author[1],
+      }))
+    : [];
+
+  const fileChartData = data
+    ? data.most_changed_files.map((file) => ({
+        name: file[0].split("/").pop(),
+        changes: file[1],
+      }))
+    : [];
+
   return (
     <div className="app">
       <section className="hero">
