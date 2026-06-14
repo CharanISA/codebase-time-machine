@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0b1020;
+  color: white;
+}
+
+.app {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: #aab6d3;
+}
+
+.search-box {
+  display: flex;
+  gap: 12px;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+input {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #2d3a5f;
+  background: #121a33;
+  color: white;
+  font-size: 16px;
+}
+
+button {
+  padding: 15px 22px;
+  border: none;
+  border-radius: 10px;
+  background: #4f8cff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #346fd1;
+}
+
+.loading {
+  text-align: center;
+  color: #7db4ff;
+}
+
+.dashboard h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.stat-card,
+.card,
+.insight-card {
+  background: #121a33;
+  border: 1px solid #26365f;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.stat-card span {
+  color: #aab6d3;
+  font-size: 14px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 26px;
+  color: #7db4ff;
+}
+
+.insight-card {
+  margin-bottom: 20px;
+  border-left: 5px solid #4f8cff;
+}
+
+.insight-card h3,
+.card h3 {
+  margin-top: 0;
+  color: #7db4ff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 11px 0;
+  border-bottom: 1px solid #26365f;
+}
+
+.row span {
+  word-break: break-word;
+}
+
+.commit-card {
+  background: #0b1020;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  border-left: 4px solid #4f8cff;
+}
+
+.commit-top {
+  display: flex;
+  justify-content: space-between;
+  color: #7db4ff;
+}
+
+.commit-card p {
+  margin: 10px 0;
+}
+
+.commit-card small {
+  color: #aab6d3;
+}
+
+@media (max-width: 800px) {
+  .search-box,
+  .grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+}
